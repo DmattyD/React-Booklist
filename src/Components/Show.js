@@ -14,7 +14,8 @@ class Show extends Component {
 
 componentDidMount = async () => {
     const id = this.state.pathname.slice(6,)
-       /// this is the get method
+    console.log(id)  
+    /// this is the get method
      await fetch(`http://localhost:4000/Show/${id}`)
     .then(result => {
         return result.json();
@@ -25,20 +26,20 @@ componentDidMount = async () => {
     
 }
 
-deleteBook = async (e) => {
-    const id = this.state.pathname.slice(6)
-    console.log(id)
-//     let data = { id : e }
-//     data=JSON.stringify(data)
-//        await fetch(`http://localhost:4000/Show/${id}`),
-//        {
-//        method: "DELETE",
-//        body: data,
-//      headers: {
-//          "Content-Type": "application/json"
-//      }
-//  }.then.props.history.push('/')
-}
+// deleteBook = async (e) => {
+//     const id = this.state.pathname.slice(6)
+//     console.log(id)
+// //     let data = { id : e }
+// //     data=JSON.stringify(data)
+// //        await fetch(`http://localhost:4000/Show/${id}`),
+// //        {
+// //        method: "DELETE",
+// //        body: data,
+// //      headers: {
+// //          "Content-Type": "application/json"
+// //      }
+// //  }.then.props.history.push('/')
+// }
 
 
 render() {
