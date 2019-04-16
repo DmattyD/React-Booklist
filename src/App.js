@@ -1,40 +1,75 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import "bootstrap/dist/css/bootstrap.min.css"
 import './App.css';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 
 class App extends Component {
-  render() {  return (
-    <div class="container">
-       <div class="panel panel-default">
-           <div class="panel-heading">
-             <h3 class="panel-title">
+
+  constructor(props){
+    super(props);
+    this.
+    state = {
+      Booklist: []}
+      };
+  
+     
+      componentDidMount() {
+        fetch('http://localhost:4000')
+        .then(result => {
+          return result.json();
+        })
+
+          .then(response => {
+            this.setState({ Booklist: response}) /// ONLY RESPONSE, not response.data
+        })
+      }
+
+    //   getBook = async(e) => {
+    //     const _id = this.props.match.params.id;
+    //     /// this is the get method
+    //     await fetch(`http://localhost:4000/Show/${_id}`)
+    //     .then(result => {
+    //         return result.json();
+    //     })
+    //     .then(response => {
+    //         this.setState({Booklist: response})
+    //     })
+        
+    // }
+  render() { 
+    console.log(this.state.Booklist)
+    return (
+    <div className="container">
+       <div className="panel panel-default">
+           <div className="panel-heading">
+             <h3 className="panel-title">
                  BOOK LIST
               </h3>
            </div>
-           <div class="panel-body">
+           <div className="panel-body">
            <h4><Link to="/Create">Add Book</Link></h4>
-           <table class="table table-stripe">
+           <table className="table table-stripe">
             <thead>
               <tr>
                 <th>Title</th>
                 <th>Author</th>
                 <th>Pages</th>
-                {/* <th>Thoughts</th> */}
+                <th>ID</th>
                 <th>Completed</th>
               </tr>
             </thead>
-            {/* <tbody>
-                <tr>
-                  <td><Link to={`/Show/`}>{Book_Entries.Title}</Link></td>
-                  <td>{Book_Entries.Author}</td>
-                  <td>{Book_Entries.Pages}</td>
-                  <td>{Book_Entries.Thoughts}</td> 
-                  <td>{Book_Entries.Completed}</td>
-                </tr>
+            <tbody>
+            {this.state.Booklist.map((Booklist, index) => 
+                 <tr key={index}>
+                  <td><Link to={`/Show/${Booklist._id}`} value={Booklist._id} onClick={(e)=>this.getBook(e.target.value)}>{Booklist.Title}</Link></td>
+                  <td>{Booklist.Author}</td>
+                  <td>{Booklist.Pages}</td>
+                  <td>{Booklist._id}</td> 
+                  <td>{Booklist.Completed}</td>
+                </tr> 
                 )}
-            </tbody> */}
+            </tbody> 
            </table>
            </div>
         </div>
