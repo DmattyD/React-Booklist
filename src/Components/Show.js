@@ -12,13 +12,10 @@ class Show extends Component {
          };
     
 
-componentDidMount = () => {
-    
+componentDidMount = async () => {
     const id = this.state.pathname.slice(6,)
-    console.log(id)
-
-    /// this is the get method
-     fetch(`http://localhost:4000/Show/${id}`)
+       /// this is the get method
+     await fetch(`http://localhost:4000/Show/${id}`)
     .then(result => {
         return result.json();
     })
@@ -28,19 +25,24 @@ componentDidMount = () => {
     
 }
 
-// delete = async (_id) => {
-//     //  fetch(`http://localhost:4000/Show/${_id}`).then.props.history.push('/')
-//      const data = JSON.stringify({
-//          _id: _id
-//      });
-//      await fetch(`http://localhost:4000/Show/${_id}`),{
-//      method: "DELETE",
-//      body: data,
-// }.then.props.history.push('/')}
+deleteBook = async (e) => {
+    const id = this.state.pathname.slice(6)
+    console.log(id)
+//     let data = { id : e }
+//     data=JSON.stringify(data)
+//        await fetch(`http://localhost:4000/Show/${id}`),
+//        {
+//        method: "DELETE",
+//        body: data,
+//      headers: {
+//          "Content-Type": "application/json"
+//      }
+//  }.then.props.history.push('/')
+}
 
 
 render() {
-  console.log(this.state.pathname)
+  
     return(
         <div className="container">
                 <div className="panel panel-default">
@@ -64,7 +66,7 @@ render() {
                 <dd>{this.state.Booklist.Thoughts}</dd>
             </dl>
             <Link to={`/Edit/${this.state._id}`} className="btn btn-success">Edit</Link> &nbsp;
-            <button onClick={e => this.delete(this.state._id)} className="btn btn-danger">Delete</button></div>
+            <button value={this.state.pathname.slice(6)} onClick={e => this.deleteBook(e.target.value)} className="btn btn-danger">Delete</button></div>
             </div>
         
         
