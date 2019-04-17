@@ -59,12 +59,14 @@ render() {
                 <dd>{this.state.Booklist.Author}</dd>
                 <dt>Total Pages</dt>
                 <dd>{this.state.Booklist.Pages}</dd>
+                <dt>Category</dt>
+                <dd>{this.state.Booklist.Category}</dd>
                 <dt>Completed</dt>
                 <dd>{this.state.Booklist.Completed}</dd>
                 <dt>Thoughts</dt>
                 <dd>{this.state.Booklist.Thoughts}</dd>
             </dl>
-            <Link to={`/Edit/${this.state._id}`} className="btn btn-success">Edit</Link> &nbsp;
+            <Link to={`/Edit/${this.state.Booklist._id}`} className="btn btn-success">Edit</Link> &nbsp;
             <button value={this.state.pathname.slice(6)} onClick={(e) => this.deleteBook(e.target.value)} className="btn btn-danger">Delete</button></div>
             </div>
         
