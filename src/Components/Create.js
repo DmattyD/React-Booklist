@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReactDom from 'react-dom';
 import { Link } from 'react-router-dom';
 
+
 export default class Create extends Component {
 
     state = {
@@ -10,7 +11,9 @@ export default class Create extends Component {
         Pages: 0,
         Thoughts: '',
         Completed: '',
+        Category: '',
     }
+
 
     handleChange = (e) => {
         this.setState({
@@ -33,8 +36,7 @@ export default class Create extends Component {
         this.props.history.push('/')
     }
 
-
-
+    
 
 render()
 {
@@ -53,10 +55,17 @@ render()
                     <input type="text" className="form-control" name="Title" value={this.Title} onChange={this.handleChange} placeholder="Title" />
                     <label for="author">Author:</label>
                     <input type="text" className="form-control" name="Author" value={this.Author} onChange={this.handleChange} placeholder="Author" />
+                    <label for="categotry">Category:</label>
+                    <select id="category" className="form-control" name="Category" value={this.Category} onChange={this.handleChange} placeholder="Category">
+                        <option defaultValue="uncategorized">Pick a Category</option>
+                        <option value="Sci-fi">Sci-Fi</option>
+                        <option value="Fantasy">Fantasy</option>
+                        <option value="Educational">Educational</option>
+                        </select>
                     <label for="Pages">Pages:</label>
                     <input type="number" className="form-control" name="Pages" value={this.Pages} onChange={this.handleChange} placeholder="Pages" />
                     <label for="Completed">Completed:</label>
-                    <input type="text" className="form-control" name="Completed" value={this.Completed} onChange={this.hanldeChange} placeholder="Completed" />
+                    <input type="text" className="form-control" name="Completed" value={this.Completed} onChange={this.handleChange} placeholder="Completed" />
                     <label for="Thoughts">Thoughts:</label>
                     <textArea type="text" className="form-control" name="Thoughts" cols="8" row="3" onChange={this.handleChange} placeholder="Thoughts">{this.Thoughts}</textArea>
                 </div>
