@@ -26,20 +26,18 @@ componentDidMount = async () => {
     
 }
 
-// deleteBook = async (e) => {
-//     const id = this.state.pathname.slice(6)
-//     console.log(id)
-// //     let data = { id : e }
-// //     data=JSON.stringify(data)
-// //        await fetch(`http://localhost:4000/Show/${id}`),
-// //        {
-// //        method: "DELETE",
-// //        body: data,
-// //      headers: {
-// //          "Content-Type": "application/json"
-// //      }
-// //  }.then.props.history.push('/')
-// }
+deleteBook = async (e) => {
+    const id = this.state.pathname.slice(6)
+    console.log(id)
+    let data = { id : e }
+    data=JSON.stringify(data)
+   await fetch(`http://localhost:4000/Show/${id}`,
+       {
+       method: "DELETE",
+       body: data,
+     
+ 
+    });this.props.history.push('/')}
 
 
 render() {
@@ -67,7 +65,7 @@ render() {
                 <dd>{this.state.Booklist.Thoughts}</dd>
             </dl>
             <Link to={`/Edit/${this.state._id}`} className="btn btn-success">Edit</Link> &nbsp;
-            <button value={this.state.pathname.slice(6)} onClick={e => this.deleteBook(e.target.value)} className="btn btn-danger">Delete</button></div>
+            <button value={this.state.pathname.slice(6)} onClick={(e) => this.deleteBook(e.target.value)} className="btn btn-danger">Delete</button></div>
             </div>
         
         
