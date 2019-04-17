@@ -9,7 +9,7 @@ export default class Edit extends Component{
         state = {
         pathname: this.props.location.pathname,
         Booklist: [],
-        BooklistUpdate: [],
+        BooklistOriginal: [],
         };}
 
         // binding only needed if onChange is not an arrow function
@@ -30,7 +30,7 @@ export default class Edit extends Component{
         })
         .then(response => {
             this.setState({Booklist: response})
-            this.setState({BooklistUpdate: response})
+            this.setState({BooklistOriginal: response})
         })
         
 
@@ -42,7 +42,7 @@ export default class Edit extends Component{
        
         const newBook = this.state.Booklist
 
-        const updatedBook = Object.assign(this.state.BooklistUpdate, newBook)
+        const updatedBook = Object.assign(this.state.BooklistOriginal, newBook)
         this.setState({Booklist : updatedBook})
     }
     
