@@ -55,7 +55,7 @@ class App extends Component {
                 <th>Title</th>
                 <th>Author</th>
                 <th>Pages</th>
-                <th>ID</th>
+                <th>Category</th>
                 <th>Completed</th>
               </tr>
             </thead>
@@ -65,7 +65,7 @@ class App extends Component {
                   <td><Link to={`/Show/${Booklist._id}`} value={Booklist._id} onClick={(e)=>this.getBook(e.target.value)}>{Booklist.Title}</Link></td>
                   <td>{Booklist.Author}</td>
                   <td>{Booklist.Pages}</td>
-                  <td>{Booklist._id}</td> 
+                  <td>{Booklist.Category}</td> 
                   <td>{Booklist.Completed}</td>
                 </tr> 
                 )}
