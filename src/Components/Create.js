@@ -41,26 +41,26 @@ render()
     return (
 
         <div>
-            <h3 class="panel-title">
+            <h3 className="panel-title">
                 ADD BOOK</h3>
 
-            <div class="panel-body">
-                <h4><Link to="/" class="btn btn-primary">Book List</Link></h4>
+            <div className="panel-body">
+                <h4><Link to="/" className="btn btn-primary">Book List</Link></h4>
             </div>
             <form onSubmit={this.handleSubmit}>
-                <div class="form-group">
+                <div className="form-group">
                     <label for="title">Title:</label>
-                    <input type="text" class="form-control" name="Title" value={this.Title} onChange={this.handleChange} placeholder="Title" />
+                    <input type="text" className="form-control" name="Title" value={this.Title} onChange={this.handleChange} placeholder="Title" />
                     <label for="author">Author:</label>
-                    <input type="text" class="form-control" name="Author" value={this.Author} onChange={this.handleChange} placeholder="Author" />
+                    <input type="text" className="form-control" name="Author" value={this.Author} onChange={this.handleChange} placeholder="Author" />
                     <label for="Pages">Pages:</label>
-                    <input type="number" class="form-control" name="Pages" value={this.Pages} onChange={this.handleChange} placeholder="Pages" />
+                    <input type="number" className="form-control" name="Pages" value={this.Pages} onChange={this.handleChange} placeholder="Pages" />
                     <label for="Completed">Completed:</label>
-                    <input type="text" class="form-control" name="Completed" value={this.Completed} onChange={this.hanldeChange} placeholder="Completed" />
+                    <input type="text" className="form-control" name="Completed" value={this.Completed} onChange={this.hanldeChange} placeholder="Completed" />
                     <label for="Thoughts">Thoughts:</label>
-                    <textArea type="text" class="form-control" name="Thoughts" cols="8" row="3" onChange={this.handleChange} placeholder="Thoughts">{this.Thoughts}</textArea>
+                    <textArea type="text" className="form-control" name="Thoughts" cols="8" row="3" onChange={this.handleChange} placeholder="Thoughts">{this.Thoughts}</textArea>
                 </div>
-                <button type="submit" class="btn btn-success">Submit</button>
+                <button type="submit" className="btn btn-success">Submit</button>
             </form>
         </div>
 
