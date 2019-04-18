@@ -25,7 +25,7 @@ export default class Create extends Component {
     handleSubmit = async (e) => {
         e.preventDefault()
         const data = JSON.stringify(this.state)
-        await fetch("http://localhost:4000/Create", {
+        await fetch("https://booklist-server.herokuapp.com/Create", {
             method: "POST",
             body: data,
             headers: {

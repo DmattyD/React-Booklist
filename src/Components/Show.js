@@ -16,7 +16,7 @@ componentDidMount = async () => {
     const id = this.state.pathname.slice(6,)
     console.log(id)  
     /// this is the get method
-     await fetch(`http://localhost:4000/Show/${id}`)
+     await fetch(`https://booklist-server.herokuapp.com/Show/${id}`)
     .then(result => {
         return result.json();
     })
