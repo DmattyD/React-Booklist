@@ -25,20 +25,23 @@ componentDidMount = async () => {
     })
     
 }
+/// if I want to reload a page after updating, call the componentDidMount() with ";this.componentDidMount();" this essentially reloads state
 
 deleteBook = async (e) => {
     const id = this.state.pathname.slice(6)
-    let data = { _id : id }
-    data=JSON.stringify(data)
+    let data = JSON.stringify({_id:id}) /// this is where I assign the delete by id data, to be called in the Delete method
+    
     console.log(data)
    await fetch(`http://localhost:4000/Show/${id}`,
        {
        method: "DELETE",
        body: data,
-     
+     headers: {
+         "Content-Type": "application/json" /// this is required
+     }
  
-    });this.props.history.push('/')}
-
+    });this.props.history.push('/')
+}
 
 render() {
   
