@@ -9,6 +9,13 @@
     "react-router-dom": "^5.0.0",
     "react-scripts": "2.1.8"
   },
+  "engines": {                  
+    "node": "8.15.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DmattyD/React-Booklist"
+  },  
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -23,5 +30,6 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "proxy": "http://localhost:8080"
 }

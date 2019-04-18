@@ -32,7 +32,7 @@ deleteBook = async (e) => {
     let data = JSON.stringify({_id:id}) /// this is where I assign the delete by id data, to be called in the Delete method
     
     console.log(data)
-   await fetch(`http://localhost:4000/Show/${id}`,
+   await fetch(`https://booklist-server.herokuapp.com/Show/${id}`,
        {
        method: "DELETE",
        body: data,
