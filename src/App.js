@@ -15,7 +15,7 @@ class App extends Component {
   
      
       componentDidMount() {
-        fetch('https://booklist-server.herokuapp.com/')
+        fetch('http://localhost:4000')
         .then(result => {
           return result.json();
         })

@@ -16,7 +16,7 @@ componentDidMount = async () => {
     const id = this.state.pathname.slice(6,)
     console.log(id)  
     /// this is the get method
-     await fetch(`https://booklist-server.herokuapp.com/Show/${id}`)
+     await fetch(`http://localhost:4000/Show/${id}`)
     .then(result => {
         return result.json();
     })
@@ -32,7 +32,7 @@ deleteBook = async (e) => {
     let data = JSON.stringify({_id:id}) /// this is where I assign the delete by id data, to be called in the Delete method
     
     console.log(data)
-   await fetch(`https://booklist-server.herokuapp.com/Show/${id}`,
+   await fetch(`http://localhost:4000/Show/${id}`,
        {
        method: "DELETE",
        body: data,
