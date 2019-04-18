@@ -65,7 +65,11 @@ render()
                     <label for="Pages">Pages:</label>
                     <input type="number" className="form-control" name="Pages" value={this.Pages} onChange={this.handleChange} placeholder="Pages" />
                     <label for="Completed">Completed:</label>
-                    <input type="text" className="form-control" name="Completed" value={this.Completed} onChange={this.handleChange} placeholder="Completed" />
+                    <select id="completed" className="form-control" name="Completed" value={this.Completed} onChange={this.handleChange} placeholder="Did you finish the book?">
+                        <option defaultValue="No">No</option>
+                        <option value="In Progress">In Progress</option>
+                        <option value="Completed">Completed</option>
+                        </select>
                     <label for="Thoughts">Thoughts:</label>
                     <textArea type="text" className="form-control" name="Thoughts" cols="8" row="3" onChange={this.handleChange} placeholder="Thoughts">{this.Thoughts}</textArea>
                 </div>
