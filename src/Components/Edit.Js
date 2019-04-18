@@ -100,7 +100,12 @@ export default class Edit extends Component{
             </div>
             <div className="form-group">
            <label for="Completed">Completed</label>
-           <input type="text" className="form-control" name="Completed" value={this.state.Booklist.Completed} onChange={this.handleChange} placeholder="Completed"/>
+           <select id="completed" className="form-control" name="Completed" value={this.Completed} onChange={this.handleChange} placeholder={this.Completed}>
+                        
+                        <option value="No">No</option>
+                        <option value="In Progress">In Progress</option>
+                        <option value="Completed">Completed</option>
+                        </select>
             <button type ="submit" onClick={this.handleSubmit} className="btn btn-success">Submit</button>
             
             </div>
