@@ -49,6 +49,9 @@ class App extends Component {
            </div>
            <div className="panel-body">
            <h4><Link to="/Create">Add Book</Link></h4>
+           <div classn>
+             <h4 className = "Completed Books">Completed Books</h4>
+           </div>
            <table className="table table-stripe">
             <thead>
               <tr>

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-class Edit extends Component{
+export default class Edit extends Component{
 
     constructor(props) {
         super(props);
@@ -24,7 +24,7 @@ class Edit extends Component{
         const id = this.state.pathname.slice(6,)
         console.log(id)  
         /// this is the get method
-         await fetch(`https://booklist-server.herokuapp.com/Show/${id}`)
+         await fetch(`http://localhost:4000/Show/${id}`)
         .then(result => {
             return result.json();
         })
@@ -121,4 +121,4 @@ class Edit extends Component{
     
     }
     
-    export default Edit;
+   
