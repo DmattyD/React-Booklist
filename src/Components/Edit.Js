@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-export default class Edit extends Component{
+class Edit extends Component{
 
     constructor(props) {
         super(props);
@@ -121,4 +121,4 @@ export default class Edit extends Component{
     
     }
     
-   
+    export default Edit;
