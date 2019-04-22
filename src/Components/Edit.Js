@@ -51,7 +51,7 @@ export default class Edit extends Component{
         e.preventDefault()
         const id = this.state.pathname.slice(6,)
         const data = JSON.stringify(this.state.Booklist)
-        await fetch(`https://booklist-server.herokuapp.com/Edit/${id}`, {
+        await fetch(`https://localhost:4000/Edit/${id}`, {
             method: "PUT",
             body: data,
             headers: {
@@ -120,5 +120,5 @@ export default class Edit extends Component{
     }
     
     }
+
     
-   
