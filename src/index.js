@@ -5,7 +5,7 @@ import App from './App';
 // import * as serviceWorker from './serviceWorker';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Create from './Components/Create';
-import Edit from './Components/Edit';
+import Edit from './Components/BookEdit';
 import Show from './Components/Show';
 import Delete from './Components/Delete';
 
