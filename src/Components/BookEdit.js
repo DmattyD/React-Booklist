@@ -92,6 +92,10 @@ export default class Edit extends Component{
                         <option value="Sci-fi">Sci-Fi</option>
                         <option value="Fantasy">Fantasy</option>
                         <option value="Educational">Educational</option>
+                        <option value="Educational">Romance</option>
+                        <option value="Educational">Urban Fantasy</option>
+                        <option value="Educational">Self-Help</option>
+                        <option value="Educational">Non-Fiction</option>
                         </select>
             </div>
             <div className="form-group">

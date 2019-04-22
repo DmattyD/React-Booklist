@@ -61,6 +61,10 @@ render()
                         <option value="Sci-fi">Sci-Fi</option>
                         <option value="Fantasy">Fantasy</option>
                         <option value="Educational">Educational</option>
+                        <option value="Educational">Romance</option>
+                        <option value="Educational">Urban Fantasy</option>
+                        <option value="Educational">Self-Help</option>
+                        <option value="Educational">Non-Fiction</option>
                         </select>
                     <label for="Pages">Pages:</label>
                     <input type="number" className="form-control" name="Pages" value={this.Pages} onChange={this.handleChange} placeholder="Pages" />

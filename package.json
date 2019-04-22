@@ -4,18 +4,19 @@
   "private": true,
   "dependencies": {
     "bootstrap": "^4.3.1",
+    "mdbreact": "^4.13.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.0",
     "react-scripts": "2.1.8"
   },
-  "engines": {                  
+  "engines": {
     "node": "8.15.0"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/DmattyD/React-Booklist"
-  },  
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

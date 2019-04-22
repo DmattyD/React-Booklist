@@ -48,7 +48,7 @@ render() {
     return(
         <div className="container">
                 <div className="panel panel-default">
-            <div className="panel-heading">
+            <div className="panel-heading" style={{textAlign: "center"}}>
                 <h4><Link to="/">Book List</Link></h4>
                 <h3>
                 {this.state.Booklist.Title}
@@ -56,8 +56,8 @@ render() {
             </div>
             <div className="panel-body">
             <dl>
-                <dt>Title</dt>
-                <dd>{this.state.Booklist.Title}</dd>
+                {/* <dt>Title</dt>
+                <dd>{this.state.Booklist.Title}</dd> */}
                 <dt>Author</dt>
                 <dd>{this.state.Booklist.Author}</dd>
                 <dt>Total Pages</dt>
