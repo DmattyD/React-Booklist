@@ -32,8 +32,6 @@ export default class Edit extends Component{
             this.setState({Booklist: response})
             this.setState({BooklistOriginal: response})
         })
-        
-
     }
     handleChange = async (e) => {
        await this.setState({
@@ -51,13 +49,12 @@ export default class Edit extends Component{
         e.preventDefault()
         const id = this.state.pathname.slice(6,)
         const data = JSON.stringify(this.state.Booklist)
-        await fetch(`https://localhost:4000/Edit/${id}`, {
+        await fetch(`http://localhost:4000/Edit/${id}`, {
             method: "PUT",
             body: data,
             headers: {
                 "Content-Type": "application/json"
             }
-            
         });
         this.props.history.push('/')
     }
