@@ -108,7 +108,7 @@ export default class Edit extends Component{
                         <option value="Completed">Completed</option>
                         </select>
             <button type ="submit" onClick={this.handleSubmit} className="btn btn-success">Submit</button>
-            
+            <Link to={`/`} className="btn btn-warning">Cancel</Link> &nbsp;
             </div>
             
             
