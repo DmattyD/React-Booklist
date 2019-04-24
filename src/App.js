@@ -73,13 +73,13 @@ class App extends Component {
               </h3>
            </div>
            <div className="panel-body">
-             <div classn>
+             <div className>
              <h4 className = "Completed Books">My Book List</h4>
            </div>
            <table className="table table-stripe">
             <thead>
               <tr>
-                <th onclick={()=>this.sortBy('Title')}>Title</th>
+                <th onClick={()=>this.sortBy('Title')}>Title</th>
                 <th onClick={()=>this.sortBy('Author')}>Author</th>
                 <th onClick={()=>this.sortBy('Pages')}>Pages</th>
                 <th onClick={()=>this.sortBy('Category')}>Category</th>
@@ -98,7 +98,7 @@ class App extends Component {
                 )}
             </tbody> 
            </table>
-           <h4><Link to="/Create">Add Book</Link></h4>
+           <Link className="btn btn-success" to="/Create">Add Book</Link>
            </div>
         </div>
     </div>
