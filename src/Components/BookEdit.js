@@ -24,7 +24,7 @@ export default class Edit extends Component{
         const id = this.state.pathname.slice(6,)
         console.log(id)  
         /// this is the get method
-         await fetch(`http://localhost:4000/Show/${id}`)
+         await fetch(`https://booklist-server.herokuapp.com/Show/${id}`)
         .then(result => {
             return result.json();
         })
@@ -49,7 +49,7 @@ export default class Edit extends Component{
         e.preventDefault()
         const id = this.state.pathname.slice(6,)
         const data = JSON.stringify(this.state.Booklist)
-        await fetch(`http://localhost:4000/Edit/${id}`, {
+        await fetch(`https://booklist-server.herokuapp.com/Edit/${id}`, {
             method: "PUT",
             body: data,
             headers: {
